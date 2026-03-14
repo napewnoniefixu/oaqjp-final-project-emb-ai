@@ -15,7 +15,11 @@ def sent_detector():
     sadness = analyzed['sadness']
     dominant = analyzed['dominant_emotion']
 
-    return f"For the given statement, the system response is 'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, 'joy': {joy} and 'sadness': {sadness}. The dominant emotion is {dominant}."
+    if dominant != None:
+        return f"For the given statement, the system response is 'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, 'joy': {joy} and 'sadness': {sadness}. The dominant emotion is {dominant}."
+    else:
+        return "Invalid text! Please try again!"
+
 
 @app.route("/")
 def render_index_page(): 
