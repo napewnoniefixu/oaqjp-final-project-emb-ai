@@ -26,4 +26,4 @@ def emotion_detector(text_to_analyze):
     elif response.status_code == 400:
         pass
     
-    return result 
+    return result
